@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="wrap-input">
+    <input
+      class="search"
+      type="text"
+      (keyup.enter)="searchRepositories($event.target.value)"
+      placeholder="Enter repository name"
+    />
+  </div>
+
+  <div class="list-wrap">
+    <ul class="list-filters">
+      <li class="list-filters__item">
+        <button class="button-filter" (click)="sortSize()">
+          Size filter
+        </button>
+      </li>
+      <li class="list-filters__item">
+        <button class="button-filter" (click)="sortWatchers()">
+          Watchers filter
+        </button>
+      </li>
+    </ul>
+
+    <ul class="list-result__search" *ngFor="let repo of repositories">
+      <li class="result-search__item">
+        <a [routerLink]="['/repository', repo.id]" [state]="repo"
+          >Подробнее о репозитории</a
+        >
+        <img src="{{ repo.img }}" class="img-card" />
+        <a class="result-item__card">
+          <p class="result-item__title">{{ repo.name }}</p>
+          <a class="link-repo" href="{{ repo.url }}">{{ repo.url }}</a>
+          <p class="result-item__watchers inf-card">
+            Просмоты репозитория: {{ repo.watchers }}
+          </p>
+          <P class="result-item__size inf-card"
+            >Размер репозитория: {{ repo.size }}</P
+          >
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

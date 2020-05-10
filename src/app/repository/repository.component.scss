@@ -1,0 +1,24 @@
+.container-repository {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.title-repository {
+  margin-bottom: 20px;
+}
+.content__repository {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.link-home {
+  position: absolute;
+  top: -50px;
+  right: 100px;
+  color: #592121;
+  font-size: 18px;
+  letter-spacing: 1px;
+}

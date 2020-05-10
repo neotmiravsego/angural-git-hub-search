@@ -1,0 +1,16 @@
+<div class="container-repository">
+  <a routerLink="/" class="link-home"> Go to Home</a>
+
+  <h1 class="title-repository">{{ repo.language }}</h1>
+  <div class="description-wrap">
+    <p class="description-repository content__repository">
+      {{ repo.description }}
+    </p>
+    <div class="content__repository" *ngIf="repo.wiki">
+      Wiki available in repository
+    </div>
+    <div class="content__repository" *ngIf="!repo.wiki">
+      Wiki is not available in the repository
+    </div>
+  </div>
+</div>
