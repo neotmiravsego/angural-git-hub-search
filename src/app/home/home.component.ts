@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {}
 
   searchRepositories(c: string) {
-    this.httpService.getUsers(c).subscribe((data) => {
+    this.httpService.getRepositories(c).subscribe((data) => {
       this.repositories = data;
     });
   }
