@@ -5,7 +5,5 @@ export interface repositoriesInfo {
   size: number;
   img: string;
   id: number;
-  // description: string;
-  // wiki: boolean;
-  // language: string;
+
 }
