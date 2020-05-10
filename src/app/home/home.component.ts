@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   }
   sortSize() {
     if (!this.isSortedSize) {
-      this.repositories = this.repositories.sort((a: any, b: any) => {
+      this.repositories = this.repositories.sort((a: repositoriesInfo, b: repositoriesInfo) => {
         return a.size - b.size;
       });
       this.isSortedSize = true;
@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
   }
   sortWatchers() {
     if (!this.isSortedWatch) {
-      this.repositories = this.repositories.sort((a: any, b: any) => {
+      this.repositories = this.repositories.sort((a: repositoriesInfo, b: repositoriesInfo) => {
         return a.watchers - b.watchers;
       });
       this.isSortedWatch = true;

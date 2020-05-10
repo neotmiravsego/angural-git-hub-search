@@ -24,7 +24,10 @@
 
     <ul class="list-result__search" *ngFor="let repo of repositories">
       <li class="result-search__item">
-        <a [routerLink]="['/repository', repo.id]" [state]="repo"
+        <a
+          class="link-repository"
+          [routerLink]="['/repository', repo.id]"
+          [state]="repo"
           >Подробнее о репозитории</a
         >
         <img src="{{ repo.img }}" class="img-card" />
