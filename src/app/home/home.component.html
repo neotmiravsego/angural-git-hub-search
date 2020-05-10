@@ -1,12 +1,20 @@
 <div class="container">
-  <div class="wrap-input">
+  <form class="wrap-input" [formGroup]="form">
     <input
-      class="search"
+      [(ngModel)]="searchText"
       type="text"
-      (keyup.enter)="searchRepositories($event.target.value)"
       placeholder="Enter repository name"
+      formControlName="searchInfo"
+      required
     />
-  </div>
+    <button
+      class="searchButton"
+      (click)="searchRepositories(searchText.valueOf())"
+      [disabled]="form.invalid"
+    >
+      <img src="../../assets/img/search.svg" alt="" />
+    </button>
+  </form>
 
   <div class="list-wrap">
     <ul class="list-filters">

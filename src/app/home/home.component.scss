@@ -1,4 +1,4 @@
-.search {
+input {
   padding: 5px 15px;
   width: 100%;
   border-radius: 3px;
@@ -8,6 +8,9 @@
   font-size: 14px;
   &::placeholder {
     padding: 20px;
+  }
+  &.ng-invalid {
+    border: 1px solid red;
   }
 }
 .wrap-input {
@@ -84,4 +87,7 @@
     left: 50%;
     transform: translateX(-50%);
   }
+}
+.searchButton {
+  border: none;
 }
