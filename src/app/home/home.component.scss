@@ -90,4 +90,8 @@ input {
 }
 .searchButton {
   border: none;
+  position: relative;
+  &:disabled {
+    opacity: 0.5;
+  }
 }
