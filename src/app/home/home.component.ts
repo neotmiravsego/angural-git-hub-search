@@ -12,7 +12,7 @@ import { repositoriesInfo } from '../repository/IreposInfo';
 export class HomeComponent implements OnInit {
   repositories: repositoriesInfo[] = [];
   repo: repoInfo;
-  isSorted: boolean = false;
+  isSortedSize: boolean = false;
   isSortedWatch: boolean=false;
   constructor(private httpService: HttpService) {}
 
@@ -24,11 +24,11 @@ export class HomeComponent implements OnInit {
     });
   }
   sortSize() {
-    if (!this.isSorted) {
+    if (!this.isSortedSize) {
       this.repositories = this.repositories.sort((a: any, b: any) => {
         return a.size - b.size;
       });
-      this.isSorted = true;
+      this.isSortedSize = true;
     } else {
       this.repositories = this.repositories.reverse();
     }

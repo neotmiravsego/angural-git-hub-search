@@ -5,7 +5,6 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 export class HttpService {
-  users: repositoriesInfo[] = [];
   constructor(private http: HttpClient) {}
   getInfoRepo(id: number) {
     return this.http.get(`https://api.github.com/repositories/${id}`);
