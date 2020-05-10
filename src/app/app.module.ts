@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
 import { HttpService } from './http.service';
-import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RepositoryComponent } from './repository/repository.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, RepositoryComponent],
